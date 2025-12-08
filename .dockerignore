@@ -1,0 +1,12 @@
+.venv
+.git
+.gitignore
+runs/
+tmp/
+.gemini/
+.idea/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.DS_Store
