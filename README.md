@@ -48,7 +48,33 @@ You can also run this project using Docker.
     docker build -t cartes-yolo .
     ```
 
-2.  **Run the Docker container:**
+2. **Run the Docker container:**
+
+    To train the model inside the container, you need to mount your local `data/` and `runs/` directories so that the container can access your dataset and save the training results.
+
+    ```bash
+    docker run -it --rm \
+      -v "$(pwd)/data:/app/data" \
+      -v "$(pwd)/runs:/app/runs" \
+      cartes-yolo \
+      --data data/dataset.yaml --epochs 100 --imgsz 640 --project runs/train --name train
+    ```
+
+    You can customize the arguments passed to `train.py` (e.g., `--epochs`, `--imgsz`, `--name`) as needed.
+
+    ### Example: Running with results in a local `tmp` folder
+
+    To direct the training results to a local `tmp` folder instead of `runs`, you can use the following command. This command mounts your local `data` directory to `/data` inside the container and your local `tmp` directory to `/app/runs` inside the container, which is where the training script will write its output.
+
+    ```bash
+    docker run -it --rm \
+      -v "$(pwd)/data:/data" \
+      -v "$(pwd)/tmp:/app/runs" \
+      cartes-yolo \
+      --epochs=1 --data=/data/dataset.yaml
+    ```
+
+
 
 
 
