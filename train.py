@@ -10,7 +10,7 @@ if __name__ == '__main__':
     parser.add_argument('--data', type=str, default='data/dataset.yaml', help='path to dataset.yaml')
     parser.add_argument('--epochs', type=int, default=100, help='number of epochs')
     parser.add_argument('--imgsz', type=int, default=640, help='image size')
-    parser.add_argument('--project', type=str, default='runs/detect', help='project name')
+    parser.add_argument('--project', type=str, default='runs/train', help='project name')
     parser.add_argument('--name', type=str, default='train', help='experiment name')
     opt = parser.parse_args()
     results = model.train(data=opt.data, epochs=opt.epochs, imgsz=opt.imgsz, project=opt.project, name=opt.name)

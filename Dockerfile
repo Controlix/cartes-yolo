@@ -19,5 +19,4 @@ COPY yolo11n.pt .
 # Copy the content of the local src directory to the working directory
 COPY train.py .
 
-# Create a directory for the dataset
-RUN mkdir /data
+ENTRYPOINT ["python", "train.py"]

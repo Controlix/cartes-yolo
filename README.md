@@ -1,6 +1,6 @@
-# YOLOv11 Object Detection Training
+# YOLO11 Object Detection Training
 
-This project is set up to train a YOLOv11 model for object detection.
+This project is set up to train a YOLO11 model for object detection.
 
 ## Setup
 
@@ -37,3 +37,18 @@ python train.py
 ```
 
 The training results, including saved model weights, will be stored in the `runs/` directory.
+
+## Docker
+
+You can also run this project using Docker.
+
+1.  **Build the Docker image:**
+
+    ```bash
+    docker build -t cartes-yolo .
+    ```
+
+2.  **Run the Docker container:**
+
+
+
