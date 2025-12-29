@@ -59,19 +59,19 @@ names:
   51: Ac
 
 # augmentation
-degrees: 15
-translate: 0.1
-scale: 0.5
-shear: 2.0
+# degrees: 15
+# translate: 0.1
+# scale: 0.5
+# shear: 2.0
 
-mosaic: 1.0
-mixup: 0.15
+# mosaic: 1.0
+# mixup: 0.15
 
-hsv_h: 0.015
-hsv_s: 0.7
-hsv_v: 0.4
+# hsv_h: 0.015
+# hsv_s: 0.7
+# hsv_v: 0.4
 
-blur: 0.01
+# blur: 0.01
 
-flipud: 0.0
-fliplr: 0.0
+# flipud: 0.0
+# fliplr: 0.0

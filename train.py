@@ -2,7 +2,7 @@ from ultralytics import YOLO
 import argparse
 
 # Load a model
-model = YOLO('yolo11n.pt')  # load a pretrained model (recommended for training)
+model = YOLO('yolo11s.pt')  # load a pretrained model (recommended for training)
 
 # Train the model
 if __name__ == '__main__':
@@ -12,5 +12,6 @@ if __name__ == '__main__':
     parser.add_argument('--imgsz', type=int, default=640, help='image size')
     parser.add_argument('--project', type=str, default='runs/train', help='project name')
     parser.add_argument('--name', type=str, default='train', help='experiment name')
+    parser.add_argument('--batch', type=int, default=16, help='batch size')
     opt = parser.parse_args()
-    results = model.train(data=opt.data, epochs=opt.epochs, imgsz=opt.imgsz, project=opt.project, name=opt.name)
+    results = model.train(data=opt.data, epochs=opt.epochs, imgsz=opt.imgsz, project=opt.project, name=opt.name, batch=opt.batch, cache=True)
